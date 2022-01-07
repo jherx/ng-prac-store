@@ -8,7 +8,7 @@ import { InfoPagina } from '../interfaces/info-pagina-interface';
 export class InfoPaginaService {
   info: InfoPagina = {};
   cargada = false;
-  equipo: any[] = [];
+  public equipo: any[] = [];
 
   constructor(private http: HttpClient) {
     console.log('Servicio de info listo');
@@ -28,10 +28,12 @@ export class InfoPaginaService {
 
   private cargaEquipo() {
     this.http
-      .get('https://ng-portafolio-ebd80-default-rtdb.firebaseio.com/.json')
-      .subscribe((resp: any) => {
+      .get(
+        'https://ng-portafolio-ebd80-default-rtdb.firebaseio.com/equipo.json'
+      )
+      .subscribe((resp:  any) => {
         this.equipo = resp;
-        console.log(resp)
+        console.log(resp);
       });
   }
 }
