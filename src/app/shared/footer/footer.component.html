@@ -1,53 +1,56 @@
 <footer class="ae-container-fluid rk-footer">
-  <div class="ae-grid ae-grid--collapse">
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
-      <ul class="rk-menu rk-footer-menu">
-        <li routerLinkActive="active" class="rk-menu__item">
-          <a routerLink="about" class="rk-menu__link">About</a>
-        </li>
-        <li class="rk-menu__item">
-          <a href="documentation.html" class="rk-menu__link">Docs</a>
-        </li>
-        <li class="rk-menu__item">
-          <a href="contact.html" class="rk-menu__link">Contact</a>
-        </li>
-      </ul>
-      <p class="rk-footer__text rk-footer__copy">
-        <span class="ae-u-bold">© </span
-        ><span class="ae-u-bolder">{{ year }} Rich Vagos </span>All Right
-        Reserved.
-      </p>
-    </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-      <a href="#0" class="rk-social-btn">
-        <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg></a
-      ><a href="#0" class="rk-social-btn">
-        <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use></svg></a
-      ><a href="#0" class="rk-social-btn">
-        <svg>
+	<div class="ae-grid ae-grid--collapse">
+		<div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
+			<ul class="rk-menu rk-footer-menu">
+				<li routerLinkActive="active" class="rk-menu__item">
+					<a routerLink="about" class="rk-menu__link">About</a>
+				</li>
+				<li class="rk-menu__item">
+					<a href="documentation.html" class="rk-menu__link">Docs</a>
+				</li>
+				<li class="rk-menu__item">
+					<a href="contact.html" class="rk-menu__link">Contact</a>
+				</li>
+			</ul>
+			<p class="rk-footer__text rk-footer__copy">
+				<span class="ae-u-bold">© </span>
+        <span class="ae-u-bolder">{{ year }}
+          {{_infService.info.titulo}}  </span>All Right Reserved.
+			</p>
+		</div>
+
+		<div class="ae-grid__item item-lg-4 au-xs-ta-center">
+      <!-- facebook -->
+			<a [href]="_infService.info.facebook" target="_Blank" class="rk-social-btn">
+				<svg>
+          <use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg>
+			</a>
+      <!--? twiter -->
+			<a [href]="_infService.info.twitter" target="_Blank" class="rk-social-btn">
+				<svg>
+          <use xlink:href="assets/img/symbols.svg#icon-twitter"></use></svg>
+      </a>
+      <!--? instagram  -->
+			<a [href]="_infService.info.instagram" target="_Blank" class="rk-social-btn">
+				<svg>
           <use
-            xlink:href="assets/img/symbols.svg#icon-pinterest"
-          ></use></svg></a
-      ><a href="#0" class="rk-social-btn">
-        <svg>
-          <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use></svg
-      ></a>
-    </div>
-    <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
-      <p class="rk-footer__text rk-footer__contact">
-        <span class="ae-u-bold">Email: </span
-        ><span class="ae-u-bolder">
-          <a href="#0" class="rk-dark-color"
-            >contact@urkuportfolio.com
-          </a></span
-        >
-      </p>
-      <p class="rk-footer__text rk-footer__by">
-        Theme by
-        <a href="https://github.com/jherx" class="ae-u-bolder">jhxn07.</a>
-      </p>
-    </div>
-  </div>
+            xlink:href="assets/img/symbols.svg#icon-pinterest"></use></svg>
+      </a>
+
+			<a [href]="_infService.info.tumblr" target="_Blank" class="rk-social-btn">
+				<svg>
+          <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use></svg></a>
+		</div>
+		<div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+			<p class="rk-footer__text rk-footer__contact">
+				<span class="ae-u-bold">Email: </span><span class="ae-u-bolder">
+          <a href="mailTo:{{_infService.info.email}}" target="_Blank"  class="rk-dark-color">{{_infService.info.email}}
+          </a></span>
+			</p>
+			<p class="rk-footer__text rk-footer__by">
+				Theme by
+				<a href="https://github.com/jherx" class="ae-u-bolder">{{_infService.info.nombre}}.</a>
+			</p>
+		</div>
+	</div>
 </footer>
