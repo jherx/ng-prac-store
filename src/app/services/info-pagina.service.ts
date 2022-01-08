@@ -31,9 +31,9 @@ export class InfoPaginaService {
       .get(
         'https://ng-portafolio-ebd80-default-rtdb.firebaseio.com/equipo.json'
       )
-      .subscribe((resp:  any) => {
+      .subscribe((resp: any) => {
         this.equipo = resp;
-        console.log(resp);
+        // console.log(resp);
       });
   }
 }
