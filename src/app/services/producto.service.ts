@@ -19,12 +19,16 @@ export class ProductoService {
 
     this.http.get('https://ng-portafolio-ebd80-default-rtdb.firebaseio.com/productos_idx.json') 
     .subscribe((resp:any)=>{
-      console.log(resp);
+      // console.log(resp);
       this.productos = resp;
       setTimeout(() => {
         this.cargando = false;
       }, 2000);
       
     });
+  }
+
+  getProducto(id: String){
+   return this.http.get(`https://ng-portafolio-ebd80-default-rtdb.firebaseio.com/productos/${id}.json`) 
   }
 }
