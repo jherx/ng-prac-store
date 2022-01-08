@@ -1,6 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/*Loading... */
+.loading{
+  margin: 0 auto;
+  text-align: center;
+}
 
-
+svg path,
+svg rect{
+  fill: black;
+}
+/* animations */
 .animated{
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

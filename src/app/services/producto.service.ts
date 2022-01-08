@@ -21,7 +21,10 @@ export class ProductoService {
     .subscribe((resp:any)=>{
       console.log(resp);
       this.productos = resp;
-      this.cargando = false;
+      setTimeout(() => {
+        this.cargando = false;
+      }, 2000);
+      
     });
   }
 }
